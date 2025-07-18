@@ -1,0 +1,540 @@
+[gd_scene load_steps=7 format=3 uid="uid://c8ofyvx2xa7vb"]
+
+[ext_resource type="Script" uid="uid://b6cyn2emd736p" path="res://main_menu.gd" id="1_i26rj"]
+[ext_resource type="Script" uid="uid://drnrvpuassq0l" path="res://background.gd" id="2_eiy7p"]
+[ext_resource type="Texture2D" uid="uid://63jk7mc4d51v" path="res://Space Pic.webp" id="2_h7a2f"]
+[ext_resource type="Script" uid="uid://iwbdq4h4elt7" path="res://body_1_control.gd" id="4_7r1g0"]
+[ext_resource type="Script" uid="uid://d2bpiytkjyw31" path="res://body_2_control.gd" id="5_cqjrg"]
+[ext_resource type="Script" uid="uid://cesb38ba1kas1" path="res://body_3_control.gd" id="6_e2xy7"]
+
+[node name="Node2d" type="Node2D"]
+script = ExtResource("1_i26rj")
+
+[node name="Title" type="Label" parent="."]
+offset_left = 416.0
+offset_right = 741.0
+offset_bottom = 55.0
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 40
+text = "3 Body Problems"
+
+[node name="background" type="TextureRect" parent="."]
+z_index = -10
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("2_h7a2f")
+script = ExtResource("2_eiy7p")
+
+[node name="Body1Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_top = 50.0
+offset_right = 384.0
+offset_bottom = 450.0
+script = ExtResource("4_7r1g0")
+metadata/_edit_use_anchors_ = true
+
+[node name="Body 1" type="Label" parent="Body1Control"]
+layout_mode = 0
+offset_left = 180.0
+offset_top = 20.0
+offset_right = 233.0
+offset_bottom = 43.0
+text = "Body 1"
+
+[node name="body1massnumber" type="LineEdit" parent="Body1Control"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 50.0
+offset_right = 334.0
+offset_bottom = 110.0
+text = "10000"
+alignment = 1
+max_length = 25
+metadata/_edit_use_anchors_ = true
+
+[node name="body1massunit" type="OptionButton" parent="Body1Control"]
+layout_mode = 0
+offset_left = 334.0
+offset_top = 50.0
+offset_right = 384.0
+offset_bottom = 110.0
+selected = 0
+item_count = 5
+popup/item_0/text = "g"
+popup/item_0/id = 0
+popup/item_1/text = "Kg"
+popup/item_1/id = 1
+popup/item_2/text = "Mg"
+popup/item_2/id = 2
+popup/item_3/text = "Gg"
+popup/item_3/id = 3
+popup/item_4/text = "Tg"
+popup/item_4/id = 4
+metadata/_edit_use_anchors_ = true
+
+[node name="body1color" type="ColorPickerButton" parent="Body1Control"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 120.0
+offset_right = 165.0
+offset_bottom = 270.0
+color = Color(0.881434, 0.0262517, 3.85046e-07, 1)
+
+[node name="pos x" type="Label" parent="Body1Control"]
+layout_mode = 0
+offset_left = 170.0
+offset_top = 110.0
+offset_right = 211.0
+offset_bottom = 133.0
+text = "pos x"
+
+[node name="pos y" type="Label" parent="Body1Control"]
+layout_mode = 0
+offset_left = 170.0
+offset_top = 190.0
+offset_right = 211.0
+offset_bottom = 213.0
+text = "pos y"
+
+[node name="posxnumber" type="LineEdit" parent="Body1Control"]
+layout_mode = 0
+offset_left = 170.0
+offset_top = 135.0
+offset_right = 320.0
+offset_bottom = 195.0
+text = "100"
+
+[node name="posynumber" type="LineEdit" parent="Body1Control"]
+layout_mode = 0
+offset_left = 170.0
+offset_top = 215.0
+offset_right = 320.0
+offset_bottom = 275.0
+text = "100"
+
+[node name="posxunit" type="OptionButton" parent="Body1Control"]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 135.0
+offset_right = 380.0
+offset_bottom = 195.0
+selected = 0
+fit_to_longest_item = false
+item_count = 5
+popup/item_0/id = 0
+popup/item_1/text = "m"
+popup/item_1/id = 1
+popup/item_2/text = "Km"
+popup/item_2/id = 2
+popup/item_3/text = "Mm"
+popup/item_3/id = 3
+popup/item_4/text = "Gm"
+popup/item_4/id = 4
+
+[node name="posyunit" type="OptionButton" parent="Body1Control"]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 215.0
+offset_right = 380.0
+offset_bottom = 275.0
+selected = 0
+fit_to_longest_item = false
+item_count = 5
+popup/item_0/id = 0
+popup/item_1/text = "m"
+popup/item_1/id = 1
+popup/item_2/text = "Km"
+popup/item_2/id = 2
+popup/item_3/text = "Mm"
+popup/item_3/id = 3
+popup/item_4/text = "Gm"
+popup/item_4/id = 4
+
+[node name="xvelocity" type="LineEdit" parent="Body1Control"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 290.0
+offset_right = 210.0
+offset_bottom = 350.0
+
+[node name="yvelocity" type="LineEdit" parent="Body1Control"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 355.0
+offset_right = 210.0
+offset_bottom = 415.0
+
+[node name="X Velocity" type="Label" parent="Body1Control"]
+layout_mode = 0
+offset_left = 230.0
+offset_top = 305.0
+offset_right = 305.0
+offset_bottom = 328.0
+text = "X Velocity (m/s)"
+
+[node name="Y Velocity" type="Label" parent="Body1Control"]
+layout_mode = 0
+offset_left = 230.0
+offset_top = 370.0
+offset_right = 305.0
+offset_bottom = 393.0
+text = "Y Velocity (m/s)"
+
+[node name="Body2Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 384.0
+offset_top = 50.0
+offset_right = 768.0
+offset_bottom = 450.0
+script = ExtResource("5_cqjrg")
+metadata/_edit_use_anchors_ = true
+
+[node name="Body 2" type="Label" parent="Body2Control"]
+layout_mode = 0
+offset_left = 175.0
+offset_top = 20.0
+offset_right = 228.0
+offset_bottom = 43.0
+text = "Body 2"
+
+[node name="body2massnumber" type="LineEdit" parent="Body2Control"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 50.0
+offset_right = 329.0
+offset_bottom = 110.0
+text = "10000"
+alignment = 1
+max_length = 25
+metadata/_edit_use_anchors_ = true
+
+[node name="body2massunit" type="OptionButton" parent="Body2Control"]
+layout_mode = 0
+offset_left = 329.0
+offset_top = 50.0
+offset_right = 385.0
+offset_bottom = 110.0
+selected = 0
+item_count = 5
+popup/item_0/text = "g"
+popup/item_0/id = 0
+popup/item_1/text = "Kg"
+popup/item_1/id = 1
+popup/item_2/text = "Mg"
+popup/item_2/id = 2
+popup/item_3/text = "Gg"
+popup/item_3/id = 3
+popup/item_4/text = "Tg"
+popup/item_4/id = 4
+metadata/_edit_use_anchors_ = true
+
+[node name="body2color" type="ColorPickerButton" parent="Body2Control"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 120.0
+offset_right = 160.0
+offset_bottom = 270.0
+color = Color(0, 0, 1, 1)
+
+[node name="pos x" type="Label" parent="Body2Control"]
+layout_mode = 0
+offset_left = 165.0
+offset_top = 110.0
+offset_right = 206.0
+offset_bottom = 133.0
+text = "pos x"
+
+[node name="pos y" type="Label" parent="Body2Control"]
+layout_mode = 0
+offset_left = 165.0
+offset_top = 190.0
+offset_right = 206.0
+offset_bottom = 213.0
+text = "pos y"
+
+[node name="posxnumber" type="LineEdit" parent="Body2Control"]
+layout_mode = 0
+offset_left = 165.0
+offset_top = 135.0
+offset_right = 315.0
+offset_bottom = 195.0
+text = "0"
+
+[node name="posynumber" type="LineEdit" parent="Body2Control"]
+layout_mode = 0
+offset_left = 165.0
+offset_top = 215.0
+offset_right = 315.0
+offset_bottom = 275.0
+text = "-100"
+
+[node name="posxunit" type="OptionButton" parent="Body2Control"]
+layout_mode = 0
+offset_left = 315.0
+offset_top = 135.0
+offset_right = 375.0
+offset_bottom = 195.0
+selected = 0
+fit_to_longest_item = false
+item_count = 5
+popup/item_0/id = 0
+popup/item_1/text = "m"
+popup/item_1/id = 1
+popup/item_2/text = "Km"
+popup/item_2/id = 2
+popup/item_3/text = "Mm"
+popup/item_3/id = 3
+popup/item_4/text = "Gm"
+popup/item_4/id = 4
+
+[node name="posyunit" type="OptionButton" parent="Body2Control"]
+layout_mode = 0
+offset_left = 315.0
+offset_top = 215.0
+offset_right = 375.0
+offset_bottom = 275.0
+selected = 0
+fit_to_longest_item = false
+item_count = 5
+popup/item_0/id = 0
+popup/item_1/text = "m"
+popup/item_1/id = 1
+popup/item_2/text = "Km"
+popup/item_2/id = 2
+popup/item_3/text = "Mm"
+popup/item_3/id = 3
+popup/item_4/text = "Gm"
+popup/item_4/id = 4
+
+[node name="xvelocity" type="LineEdit" parent="Body2Control"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 290.0
+offset_right = 205.0
+offset_bottom = 350.0
+
+[node name="yvelocity" type="LineEdit" parent="Body2Control"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 355.0
+offset_right = 205.0
+offset_bottom = 415.0
+
+[node name="X Velocity" type="Label" parent="Body2Control"]
+layout_mode = 0
+offset_left = 220.0
+offset_top = 305.0
+offset_right = 295.0
+offset_bottom = 328.0
+text = "X Velocity (m/s)"
+
+[node name="Y Velocity" type="Label" parent="Body2Control"]
+layout_mode = 0
+offset_left = 220.0
+offset_top = 370.0
+offset_right = 295.0
+offset_bottom = 393.0
+text = "Y Velocity (m/s)"
+
+[node name="Body3Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 768.0
+offset_top = 50.0
+offset_right = 1152.0
+offset_bottom = 450.0
+script = ExtResource("6_e2xy7")
+metadata/_edit_use_anchors_ = true
+
+[node name="Body 3" type="Label" parent="Body3Control"]
+layout_mode = 0
+offset_left = 170.0
+offset_top = 20.0
+offset_right = 223.0
+offset_bottom = 43.0
+text = "Body 3"
+
+[node name="body3massnumber" type="LineEdit" parent="Body3Control"]
+layout_mode = 0
+offset_top = 50.0
+offset_right = 324.0
+offset_bottom = 110.0
+text = "10000"
+alignment = 1
+max_length = 25
+metadata/_edit_use_anchors_ = true
+
+[node name="body3massunit" type="OptionButton" parent="Body3Control"]
+layout_mode = 0
+offset_left = 324.0
+offset_top = 50.0
+offset_right = 380.0
+offset_bottom = 110.0
+selected = 0
+item_count = 5
+popup/item_0/text = "g"
+popup/item_0/id = 0
+popup/item_1/text = "Kg"
+popup/item_1/id = 1
+popup/item_2/text = "Mg"
+popup/item_2/id = 2
+popup/item_3/text = "Gg"
+popup/item_3/id = 3
+popup/item_4/text = "Tg"
+popup/item_4/id = 4
+metadata/_edit_use_anchors_ = true
+
+[node name="body3color" type="ColorPickerButton" parent="Body3Control"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 120.0
+offset_right = 155.0
+offset_bottom = 270.0
+color = Color(0, 1, 0, 1)
+
+[node name="pos x" type="Label" parent="Body3Control"]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 110.0
+offset_right = 201.0
+offset_bottom = 133.0
+text = "pos x"
+
+[node name="pos y" type="Label" parent="Body3Control"]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 190.0
+offset_right = 201.0
+offset_bottom = 213.0
+text = "pos y"
+
+[node name="posxnumber" type="LineEdit" parent="Body3Control"]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 135.0
+offset_right = 310.0
+offset_bottom = 195.0
+text = "-100"
+
+[node name="posynumber" type="LineEdit" parent="Body3Control"]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 215.0
+offset_right = 310.0
+offset_bottom = 275.0
+text = "100"
+
+[node name="posxunit" type="OptionButton" parent="Body3Control"]
+layout_mode = 0
+offset_left = 310.0
+offset_top = 135.0
+offset_right = 370.0
+offset_bottom = 195.0
+selected = 0
+fit_to_longest_item = false
+item_count = 5
+popup/item_0/id = 0
+popup/item_1/text = "m"
+popup/item_1/id = 1
+popup/item_2/text = "Km"
+popup/item_2/id = 2
+popup/item_3/text = "Mm"
+popup/item_3/id = 3
+popup/item_4/text = "Gm"
+popup/item_4/id = 4
+
+[node name="posyunit" type="OptionButton" parent="Body3Control"]
+layout_mode = 0
+offset_left = 310.0
+offset_top = 215.0
+offset_right = 370.0
+offset_bottom = 275.0
+selected = 0
+fit_to_longest_item = false
+item_count = 5
+popup/item_0/id = 0
+popup/item_1/text = "m"
+popup/item_1/id = 1
+popup/item_2/text = "Km"
+popup/item_2/id = 2
+popup/item_3/text = "Mm"
+popup/item_3/id = 3
+popup/item_4/text = "Gm"
+popup/item_4/id = 4
+
+[node name="xvelocity" type="LineEdit" parent="Body3Control"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 290.0
+offset_right = 205.0
+offset_bottom = 350.0
+
+[node name="yvelocity" type="LineEdit" parent="Body3Control"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 355.0
+offset_right = 205.0
+offset_bottom = 415.0
+
+[node name="X Velocity" type="Label" parent="Body3Control"]
+layout_mode = 0
+offset_left = 220.0
+offset_top = 305.0
+offset_right = 295.0
+offset_bottom = 328.0
+text = "X Velocity (m/s)"
+
+[node name="Y Velocity" type="Label" parent="Body3Control"]
+layout_mode = 0
+offset_left = 220.0
+offset_top = 370.0
+offset_right = 295.0
+offset_bottom = 393.0
+text = "Y Velocity (m/s)"
+
+[node name="start" type="Button" parent="."]
+offset_left = 900.0
+offset_top = 500.0
+offset_right = 1120.0
+offset_bottom = 620.0
+theme_override_font_sizes/font_size = 30
+text = "Start"
+
+[node name="scale" type="LineEdit" parent="."]
+offset_left = 523.0
+offset_top = 506.0
+offset_right = 654.0
+offset_bottom = 560.0
+
+[node name="Zoom" type="Label" parent="."]
+offset_left = 543.0
+offset_top = 475.0
+offset_right = 634.0
+offset_bottom = 498.0
+text = "Zoom (1-10)"
+
+[connection signal="text_change_rejected" from="Body1Control/body1massnumber" to="Body1Control" method="_on_body_1_massnumber_text_change_rejected"]
+[connection signal="item_selected" from="Body1Control/body1massunit" to="Body1Control" method="_on_body_1_massunit_item_selected"]
+[connection signal="color_changed" from="Body1Control/body1color" to="Body1Control" method="_on_body_1_color_color_changed"]
+[connection signal="item_selected" from="Body1Control/posxunit" to="Body1Control" method="_on_posxunit_item_selected"]
+[connection signal="item_selected" from="Body1Control/posyunit" to="Body1Control" method="_on_posyunit_item_selected"]
+[connection signal="text_changed" from="Body1Control/xvelocity" to="Body1Control" method="_on_xvelocity_text_changed"]
+[connection signal="text_changed" from="Body1Control/yvelocity" to="Body1Control" method="_on_yvelocity_text_changed"]
+[connection signal="text_change_rejected" from="Body2Control/body2massnumber" to="Body1Control" method="_on_body_1_massnumber_text_change_rejected"]
+[connection signal="item_selected" from="Body2Control/body2massunit" to="Body2Control" method="_on_body_2_massunit_item_selected"]
+[connection signal="color_changed" from="Body2Control/body2color" to="Body2Control" method="_on_body_2_color_color_changed"]
+[connection signal="item_selected" from="Body2Control/posxunit" to="Body2Control" method="_on_posxunit_item_selected"]
+[connection signal="item_selected" from="Body2Control/posyunit" to="Body2Control" method="_on_posyunit_item_selected"]
+[connection signal="text_changed" from="Body2Control/xvelocity" to="Body2Control" method="_on_xvelocity_text_changed"]
+[connection signal="text_changed" from="Body2Control/yvelocity" to="Body2Control" method="_on_yvelocity_text_changed"]
+[connection signal="text_change_rejected" from="Body3Control/body3massnumber" to="Body1Control" method="_on_body_1_massnumber_text_change_rejected"]
+[connection signal="item_selected" from="Body3Control/body3massunit" to="Body3Control" method="_on_body_3_massunit_item_selected"]
+[connection signal="color_changed" from="Body3Control/body3color" to="Body3Control" method="_on_body_3_color_color_changed"]
+[connection signal="item_selected" from="Body3Control/posxunit" to="Body3Control" method="_on_posxunit_item_selected"]
+[connection signal="item_selected" from="Body3Control/posyunit" to="Body3Control" method="_on_posyunit_item_selected"]
+[connection signal="text_changed" from="Body3Control/xvelocity" to="Body3Control" method="_on_xvelocity_text_changed"]
+[connection signal="text_changed" from="Body3Control/yvelocity" to="Body3Control" method="_on_yvelocity_text_changed"]
+[connection signal="pressed" from="start" to="." method="_on_start_pressed"]
+[connection signal="text_changed" from="scale" to="." method="_on_scale_text_changed"]

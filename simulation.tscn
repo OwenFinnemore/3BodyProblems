@@ -1,0 +1,53 @@
+[gd_scene load_steps=7 format=3 uid="uid://dxjjtkfbx7w2h"]
+
+[ext_resource type="Script" uid="uid://bwehoimnqaa51" path="res://background2.gd" id="1_vmo2h"]
+[ext_resource type="Script" uid="uid://bebrr4gdbifcg" path="res://simulation.gd" id="1_wpwoq"]
+[ext_resource type="Texture2D" uid="uid://bko8qhu734r3f" path="res://2025_07_16_0wb_Kleki.png" id="2_iuv88"]
+[ext_resource type="Script" uid="uid://bv133p6qf3r27" path="res://body_1.gd" id="3_wpwoq"]
+[ext_resource type="Script" uid="uid://b0x7yudnoo2h1" path="res://body_2.gd" id="5_nobap"]
+[ext_resource type="Script" uid="uid://bdb57sxjcvj3j" path="res://body_3.gd" id="6_bmcrv"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_wpwoq")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+script = ExtResource("1_vmo2h")
+
+[node name="Centerpoint" type="Marker2D" parent="."]
+position = Vector2(576, 324)
+
+[node name="Body1" type="Sprite2D" parent="Centerpoint"]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_iuv88")
+script = ExtResource("3_wpwoq")
+
+[node name="Body2" type="Sprite2D" parent="Centerpoint"]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_iuv88")
+script = ExtResource("5_nobap")
+
+[node name="Body3" type="Sprite2D" parent="Centerpoint"]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_iuv88")
+script = ExtResource("6_bmcrv")
+
+[node name="Trail1" type="Line2D" parent="Centerpoint"]
+top_level = true
+
+[node name="Trail2" type="Line2D" parent="Centerpoint"]
+top_level = true
+
+[node name="Trail3" type="Line2D" parent="Centerpoint"]
+top_level = true
+
+[node name="time" type="HSlider" parent="."]
+offset_left = 460.0
+offset_right = 660.0
+offset_bottom = 24.0
+min_value = 1.0
+max_value = 1e+06
+value = 1.0
+
+[connection signal="drag_ended" from="time" to="." method="_on_time_drag_ended"]
